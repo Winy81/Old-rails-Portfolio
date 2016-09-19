@@ -1,0 +1,19 @@
+
+<% @posts.each do |post|%>
+<div id="firstcontent">
+	<div class="precontent1">
+		<div class="precontent1in">
+ <h2 class="contenttitle"><%= link_to post.title,post %></h2></br></br>
+ <p class="show_blog_p"><%= post.body %></p></br>
+ 
+</div>
+<spam class="date_view"><%= post.created_at.strftime("%b %d. %Y") %></spam>
+</div>
+
+</div>
+ 	
+		
+<% end %>
+
+ 	
+		

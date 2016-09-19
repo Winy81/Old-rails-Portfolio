@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="stylesheet" media="screen" href="css/frontpage.css">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Cs, 19 márc. 2015 19:06:20 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+
+  </head>
+  <body>
+    <header id="header">
+	 <div id="maintitle">
+	 <h1 class="firsth1">Winy Design Galery</h1>
+	 <h1 class="firsth1sec">Front <span class="and"> & </span> Developer protfolio</h1>
+	 <h1 class="firsth1thir">Login page</h1>
+	 </div>
+      <div class="headermenu">
+        <ul class="mainmenu">
+         <a href="#"><li class="firstli">Contact</li></a>
+         <a href="#"><li class="firstli">Portfolio</li></a>
+         <a href="#"><li class="firstli">Something</li></a>
+        </ul>
+     </div>
+	  <a href="#"><div id="mainbutton">Enter to my Galery</div></a>
+   </header>
+    <div id="topbar">
+	  <div class="menu2">
+	   <ul class="menuonthetop">Social links:
+	    <a href="#"><li>Facebook</li></a>
+		<a href="#"><li>Linkedin</li></a>
+		<a href="#"><li>Twitter</li></a>
+	   </ul>
+	  </div>
+	</div>
+	
+	<article id="content">
+	
+	
+	 <div id="firstcontent"><h2>Fastlinks:</h2></br>
+	  <div class="menu3">
+	   <ul class="menuonthebottom">
+	    <a href="#"><li>Faq</li></a>
+		<a href="#"><li>W3 School</li></a>
+		<a href="#"><li>Third</li></a>
+		<a href="#"><li>Fourth</li></a>
+		<a href="#"><li>Fifth</li></a>
+	   </ul>
+	  </div>
+	 
+	 </div>
+	 
+	 
+	 <div id="secondcontent">
+	 <h2>My knowladge and technologies:</h2></br>
+	 <span class="details">
+	 <p class="parag">HTML4-5, CSS2-3, Javascript, jQuery</p>
+	 <p class="parag">Dream Weaver,Adobe PS, Adobe Illustrator, Aptana Studio</p>
+	 <p class="parag">Cross paltfrom otimalization - Responsive design</p>
+	 </span>
+	 
+	 </div>
+	 
+	 <div id="thirdcontent">
+	 <h2>About me</h2></br>
+	 <span class="details">
+	 <p class="parag">My name is: Adam Nemeth</p>
+	 <p class="parag">I am IT engineer but I have worked as an freelance developer in the last some years</p></br>
+	 <h2>My contact:</h2></br>
+	 <a href="mailto:nemeth.richo@gmail.com" id="myemail">nemeth.richo@gmail.com</a> 
+	 </span>
+	 
+	 <div id="backletter">W</div>
+		
+	</article>
+
+<script>
+function start()
+{
+
+
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+if (w <= 1280){
+document.getElementById("backletter").style.display = "none";
+}
+
+else {
+document.getElementById("backletter").style.display = "block";
+
+
+if(h <= 768){
+  document.getElementById("backletter").style.marginTop = "-400px";
+  document.getElementById("backletter").style.opacity = "0";
+} 
+
+  else if(h > 768){
+  document.getElementById("backletter").style.marginTop = "20px";
+  document.getElementById("backletter").style.marginLeft = "-650px";
+  document.getElementById("backletter").style.fontSize = "1000%";
+  document.getElementById("backletter").style.opacity = "1";
+ 
+          if(h > 1080){
+          document.getElementById("backletter").style.marginTop = "300px";
+          document.getElementById("backletter").style.fontSize = "2000%";
+		  document.getElementById("backletter").style.marginLeft = "-700px";
+		  
+		     if(h > 1440){
+             document.getElementById("backletter").style.marginTop = "600px";
+             document.getElementById("backletter").style.fontSize = "3500%";
+			 document.getElementById("backletter").style.marginLeft = "-750px";}
+		  }  
+ 
+  
+  }
+
+}
+
+
+
+
+t=setTimeout(function(){start()},200);
+}
+</script>
+<script>start()</script>
+   </body>
+   
+
+</html>

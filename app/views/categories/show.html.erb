@@ -1,0 +1,12 @@
+<div id="show_categories_erb">
+<h1 class="show_categories_h1"><%= @category.name %></h1>
+<% if @posts.each do |post|%>
+  <h2 class="show_categories_h2"><%= link_to post.title,post %></h2>
+  <p class="show_categories_p"><%= post.body %></p>
+  <div class="clear_div"></div>
+<% end.empty? %>
+  <p class="show_categories_p">Sorry, no post in this category</p>
+<% end %>
+
+  <h2 class="show_categories_h2"><%= link_to "Back to Categories",categories_path %></h2>
+</div>

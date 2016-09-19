@@ -1,0 +1,16 @@
+<h1 class="blog_post_h1">Blog Posts</h1>
+<% @posts.each do |post| %>
+  <h2 class="blog_post_h2"><%= link_to post.title,post%></h2>
+  <p class="blog_post_p"><%= post.body %></p>
+  <h3 class="blog_post_h3"><%= link_to "More...",post%></h3>
+  <spam class="date_view"><%= post.created_at.strftime("%b %d. %Y") %></spam>
+  <div class="clear_div"></div>
+  
+<% end %>
+
+
+
+
+
+
+

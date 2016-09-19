@@ -1,0 +1,62 @@
+<div id="contactme_erb">
+
+<h1>Pages#contact</h1>
+<h2 class="contactme_h2">"Contact Me"</h2>
+<p class="contactme_p">Please take answer for the question, and you are going to get the emial adress</p>
+
+<div class="input_li_list">
+<p>Question is:</p></br>
+
+<p id="robot_filter"></p>
+<li><input type='number' id='text2'/></li> 
+<p>When you wrote the answer in, just perss the button for the email link</p>
+</div>
+
+
+
+<div class="email_me_button">
+	<%= link_to "Email", "javascript:sendMail()" %>
+</div>
+
+<div id="infobox_email">
+ <div id="my_mail_link"><p>Behold the link:</p></br>
+	<a href="mailto:nemeth.richo@gmail.com">
+	nemeth.richo@gmail.com</a>
+	
+	
+ </div>
+</div>
+	
+	
+
+<script language="JavaScript" type="text/javascript">
+	
+var x = Math.floor((Math.random() * 10) + 1);
+var y = Math.floor((Math.random() * 10) + 1);
+var z = x + y;
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+document.getElementById("robot_filter").innerHTML = x +" + "+ y + " = ";
+function sendMail(){
+	var f = document.getElementById("infobox_email");	
+	var	b = +document.getElementById("text2").value;
+	
+	if (z == b){
+		f.style.marginLeft = '-240px';}
+		else if(z != b){
+			alert("Please try again")
+		}
+		else{
+			alert ("Please follow the steps just prove, you are not a robot")
+		}
+	}
+
+</script>
+
+
+
+
+
+
+
+
+</div>

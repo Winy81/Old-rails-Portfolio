@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Winy Design</title>
+  <%= favicon_link_tag '/railsicon.ico' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+</head>
+<body> 
+	
+
+
+  
+  
+  <header id="header">
+	<div id="shadow">
+	 <div id="maintitle">
+	  <h1 class="firsth1">Winy Design Galery</h1>
+	  <h1 class="firsth1sec">Front <span class="and"> & </span> Developer protfolio</h1>
+	 </div>
+  	    <div class="headermenu">
+          <ul class="mainmenu">
+           <li class="firstli" onMouseOver="open_new_window_home();" onMouseOut="close_window_home();"> <%= link_to "Home", root_path %></li>
+           <li class="firstli"onMouseOver="open_new_window();" 
+onMouseOut="close_window();"> <%= link_to "About", about_path %></li>
+  		   <li class="firstli" onMouseOver="open_new_window_blog();" onMouseOut="close_window_blog();"> <%= link_to "Blog", posts_path %></li>
+           <li class="firstli" onMouseOver="open_new_window_contact();" onMouseOut="close_window_contact();"> <%= link_to "Contact", contact_path %></li>
+
+          </ul>
+       </div>
+	 </div>
+    </header>
+<script language="JavaScript" type="text/javascript">
+function open_new_window_home(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="Back to the main page";
+
+}
+
+function close_window_home(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+
+function open_new_window_blog(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="Click on it for explore the blog";
+
+}
+
+function close_window_blog(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+
+function open_new_window_contact(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="You can find our contact. Send an email, if you have question.";
+
+}
+
+function close_window_contact(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+</script> 		
+	
+    <div id="topbar">
+	  <div class="menu2">
+	   <ul class="menuonthetop">Social links:
+	    <a href="http://facebook.com" onMouseOver="open_new_window_social();" onMouseOut="close_window_social();"><li>Facebook</li></a>
+		<a href="http://linkedIn.com" onMouseOver="open_new_window_social();" onMouseOut="close_window_social();"><li>LinkedIn</li></a>
+		<a href="http://twitter.com" onMouseOver="open_new_window_social();" onMouseOut="close_window_social();"><li>Twitter</li></a>
+	   </ul>
+	  </div>
+	</div>
+<script language="JavaScript" type="text/javascript">
+function open_new_window_social(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="Links to the social platforms";
+
+}
+
+function close_window_social(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+</script> 		
+	
+	
+	<div id="mainbackground">
+	 <div class="mainbackgroundin1">
+	  <h2 class="welcome_text_top">Welcome on my Site!</h2>
+	  <a href="#" onMouseOver="open_new_window();" onMouseOut="close_window();"><div id="about_me"><%= link_to "About Me", about_path, :onmouseover => 'open_new_window()', :onmouseout => 'close_window()' %></div></a>
+	 </div>
+	 
+<script language="JavaScript" type="text/javascript">
+function open_new_window(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="Informations about developers";
+
+}
+
+function close_window(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+</script> 
+	 
+	 <div class="mainbackgroundin2">
+      <div class="mainbackgroundin2h2">
+		  <div id="search">
+			  <h2>Blog Search:</h2>
+			  <%= search_form_for @q do |f| %>
+					    
+							<%= f.text_field :title_or_body_cont %>
+						
+					    <%= f.submit "Go", :class => 'submit_button', 
+						:onmouseover => 'open_new_window3()', 
+						:onmouseout => 'close_window3()' %>
+			    <% end  %>
+				
+				
+<script language="JavaScript" type="text/javascript">
+function open_new_window3(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="Use the Search bar, explore the site.";
+
+}
+
+function close_window3(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+</script> 			
+			  
+			  
+		  </div>
+		  
+	  <h2>Fast links for demos:</h2>
+	
+	  <p>some details from the sites</p>
+    </div>
+	   
+	   <div class="demolinks"><h4>Whitt-Shadow Galery</h4><a href="#" onMouseOver="open_new_window1();" onMouseOut="close_window1();"><div class="joblink">Shortly</div></a></div>
+	   
+	   <div class="demolinks"><h4>Choco-site</h4><a href="#" onMouseOver="open_new_window1();" onMouseOut="close_window1();"><div class="joblink">Shortly</div></a></div>
+	   
+	   <div class="demolinks"><h4>Email Templates Design</h4><a href="#"><div class="joblink"><%= link_to "Shortly", demos_path,:onmouseover => 'open_new_window1()', :onmouseout => 'close_window1()' %></div></a></div>
+       
+	   <div class="demolinks"><h4>Soon</h4><a href="#" onMouseOver="open_new_window1();" onMouseOut="close_window1();"><div class="joblink">-</div></a></div>
+
+<script language="JavaScript" type="text/javascript">
+function open_new_window1(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="Direckt links for the intro pages. Just click and Enjoy!";
+}
+
+function close_window1(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+</script> 
+ 
+	 </div>
+	 
+	 <div class="categories_link">
+		 <h1 class="show_categories_h1_side">Category links:</h3>
+		 <ul class="categories_link_list">
+			 <% all_categories.each do |cat| %>
+			 <li class="show_categories_li" onMouseOver="open_new_window_categories();" onMouseOut="close_window_categories();">
+				 <%= link_to cat.name,category_path(:id =>cat.id) %></li>
+			 <% end %>
+		 </ul>
+	 </div>
+	 
+<script language="JavaScript" type="text/javascript">
+function open_new_window_categories(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="One of the links for our actual categories";
+}
+
+function close_window_categories(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+</script> 
+
+<div class="for_side_logo"></div>
+	 
+	 <div class="alter_links">
+		 <h1 class="alter_links_h1">Friend sites:</h1>
+		 <a href="http://katekisswebdesign.com" onMouseOver="open_new_window_katekiss();" onMouseOut="close_window_katekiss();">Kate Kiss Designer - Design Galery</a></br>
+		 <a href="#" onMouseOver="open_new_window_martonpolgari();" onMouseOut="close_window_martonpolgari();">Marton Polgari - Video Galery</a>
+	 </div>
+
+<script language="JavaScript" type="text/javascript">
+function open_new_window_katekiss(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="Direct link for Kate Kiss - Graphic Designer's page";
+}
+
+function close_window_katekiss(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+
+function open_new_window_martonpolgari(){
+
+var f = document.getElementById("infobox");
+f.style.width = '400px';
+document.getElementById("infoboxin").innerHTML="Direct link for Marton Polgari's video site";
+}
+
+function close_window_martonpolgari(){
+
+var x = document.getElementById("infobox");
+x.style.width = '160px';
+}
+</script> 
+	 
+	 <div class="powered_details">
+		 <h2>Powered by:</h2></br>
+		 <p>Ruby on Rails,</br> HTML5, CSS, JavaScrip</p>
+	 </div>
+	 
+	 <div id="side_text_effect">
+		 <a href="http://winydesign.com" onMouseOver="open_new_window_home();" onMouseOut="close_window_home();"><h1>Winydesign.com</h1></a>
+	 </div>
+	</div>
+	
+	<article id="content" onScroll="scroll_event()">
+		<div class="flash-message">
+		 <% flash.each do |key,value|%>
+		 <p><%= value %></p>
+		 <% end %>
+	    </div>
+		
+		
+		<%= yield %> <!--main view-->
+	 
+		
+ 	
+	</article>
+<script language="JavaScript" type="text/javascript">
+function scroll_event(){
+
+	
+}
+
+</script> 	
+	
+	
+ 	<footer id="footer">
+		
+ 	 <div class="footer_title">
+ 	  <h1 class="firsth1">Winy Design Galery</h1>
+ 	  <h1 class="firsth1sec">Front <span class="and"> & </span> 
+		  Developer protfolio</h1>
+	 </div>
+	 
+	 <p class="dev_details">Winydesign - Copyright © 2011-2016<p>
+	 
+	
+ 	
+	  
+ 	</footer>
+	
+	<div id="infobox"><div id="infoboxin"></div></div>
+	
+<script>
+function start()
+{
+
+
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+
+if (w <= 2056){
+document.getElementById("side_text_effect").style.display = "none";
+document.getElementById("side_text_effect").style.opacity = "0";
+document.getElementById("side_text_effect").style.marginRight = "10px";
+}
+
+else {
+document.getElementById("side_text_effect").style.display = "block";
+document.getElementById("side_text_effect").style.opacity = "1";
+document.getElementById("side_text_effect").style.marginRight = "135px";
+}
+
+
+
+
+t=setTimeout(function(){start()},200);
+}
+</script>
+<script>start()</script>
+  
+
+</body>
+</html>
